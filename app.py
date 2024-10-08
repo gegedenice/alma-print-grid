@@ -102,10 +102,10 @@ class AlmaGridApp:
             return
 
     def process_barcode(self, event):
-        # A adapter pour la lecture de CB avec douchette
         barcode = simpledialog.askstring("Scan Barcode", "Please enter the barcode:") # Simule l'entrée de code-barres
+        #barcode = self.entries[self.current_row][self.current_col].get().strip() # entrée de code-barre avec douchette
 
-        if self.current_row < 5 and self.current_col < 4:
+        if self.current_row < 5 and self.current_col < 4 and barcode:
             item_value = AlmaClient.dummy_search_item(format="call-number",item_barcode=barcode)
             #item_value = AlmaClient.search_item(format="call-number",item_barcode=barcode)
             self.grid[self.current_row][self.current_col] = item_value

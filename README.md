@@ -55,26 +55,21 @@ compiles the files and generates a `build` folder with the executable app.exe in
 
 ## How it works
 
-### In dev mode (UI styling)
+- In dev mode  : call numbers data are coming from the `dummy_item_data.json` file and not the Alma API.
 
-Call numbers data are coming from the `dummy_item_data.json` file and not the Alma API.
+  Press Enter ky in each cell to fill a popup with whatever value, the `AlmaClient.dummy_search_item` method is then called and returns the value "320.08 TIF" from the dummy_item_data.json file.
 
-Press Enter ky in each cell to fill a popup with whatever value, the `AlmaClient.dummy_search_item` method is then called and returns the value "320.08 TIF" from the dummy_item_data.json file.
+  ![screenshot](img/screenshot.png)
+  
+- To test with scanning barcodes and requesting Alma items API : 
+  - in `app.py`, change the `item_value = AlmaClient.dummy_search_item(format="call-number",item_barcode=barcode)` 
 
-![screenshot](img/screenshot.png)
+    line in the `process_barcode` function to
 
-### In production
-
-- In `app.py`, change the 
-  `item_value = AlmaClient.dummy_search_item(format="call-number",item_barcode=barcode)` 
-
-   line in the `process_barcode` function to
-
-  `item_value = AlmaClient.search_item(format="call-number",item_barcode=barcode)`
-
-  to request Alma API on real barcodes.
-
-2. Todo : in `app.py`, remplace `barcode = simpledialog.askstring("Scan Barcode",     "Please enter the barcode:")` with a real reading of scanned value process
+    `item_value = AlmaClient.search_item(format="call-number",item_barcode=barcode)`
+  - in `app.py`, remplace `barcode = simpledialog.askstring("Scan   Barcode", "Please enter the barcode:")` with 
+    `barcode = self.entries[self.current_row][self.current_col].get().strip()`
+   
 
 ### Todo
 
