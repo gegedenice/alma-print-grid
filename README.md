@@ -82,7 +82,7 @@ compiles the files and generates a `build` folder with the executable app.exe in
 
 ### Todo
 
-- when splitting the callnumber, the second part is displayed in first place, eg "DIFF \n 325.3" instead of "325.3 \n DIFF"
+- Fix bug : when splitting the callnumber, the second part is displayed in first place, eg "DIFF \n 325.3" instead of "325.3 \n DIFF"
 - Enhance UI
 - Configure multiples grid templates
 
