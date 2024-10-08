@@ -69,7 +69,14 @@ compiles the files and generates a `build` folder with the executable app.exe in
     `item_value = AlmaClient.search_item(format="call-number",item_barcode=barcode)`
   - in `app.py`, remplace `barcode = simpledialog.askstring("Scan   Barcode", "Please enter the barcode:")` with 
     `barcode = self.entries[self.current_row][self.current_col].get().strip()`
-   
+
+- Features : each cell can be populated with a value, that can then be rotated or split on 2 lines for printing (with the buttons under each cell). The way values are finally displayed cannot be see in the UI but only by previewing the resulting pdf. Instead, a "state" is displayed under each cell according to the user actions on the "rotate " and "split" buttons
+
+![screenshot](img/horizontal_oneline.png)
+
+![screenshot](img/horizontal_twolines.png)
+
+![screenshot](img/vertical_oneline.png)
 
 ### Todo
 
