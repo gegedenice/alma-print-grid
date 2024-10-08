@@ -1,4 +1,4 @@
-# AlmaPrintGrid : Application for printing items call numbers by scaning barcodes
+# AlmaPrintGrid : Application for printing items call numbers by scanning barcodes
 
 ![forthebadge](img/made-with-python-tkinter.svg)
 
@@ -74,7 +74,7 @@ Press Enter ky in each cell to fill a popup with whatever value, the `AlmaClient
 
   to request Alma API on real barcodes.
 
-2. Todo : in `app.py`, remplace `barcode = simpledialog.askstring("Scan Barcode",     "Please enter the barcode:")` with a real reading of scaned value process
+2. Todo : in `app.py`, remplace `barcode = simpledialog.askstring("Scan Barcode",     "Please enter the barcode:")` with a real reading of scanned value process
 
 ### Todo
 
