@@ -1,0 +1,5 @@
+api-client
+cx_Freeze
+python-dotenv
+requests
+reportlab

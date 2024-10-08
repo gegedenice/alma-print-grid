@@ -1,0 +1,23 @@
+# Ignore virtual env folder#
+###################
+**/*.venv*/**
+
+# Ignore build folder#
+###################
+build
+
+# Ignore archived version of notebooks and python stuffs #
+###################
+*.ipynb_checkpoints
+__pycache__
+
+# Ignore some local dev stuffs
+###################
+.scannerwork
+.log
+sonar-project.properties
+
+# Ignore env & config files #
+###################
+**/.env
+**/config.ini
